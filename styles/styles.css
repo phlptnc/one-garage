@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-100:#FFFFFF;
+    --primary-200:#e0e0e0;
+    --primary-300:#9b9b9b;
+    --accent-100:#7F7F7F;
+    --accent-200:#ffffff;
+    --text-100:#FFFFFF;
+    --text-200:#777777;
+    --bg-100:#000000;
+    --bg-200:#161616;
+    --bg-300:#2c2c2c;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:  var(--text-100);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*=============HEADER==================*/
+
+header {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    position: fixed;
+    background: transparent;
+    transition: 0.8s ease;
+    z-index: 9;
+}
+
+header.sticky {
+    background: var(--bg-100);
+    height: 130px;
+}
+
+.second-container {
+    width: 100%;
+    height: 200vh;
+}
+
+.navigation-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigation-menu {
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navigation-menu a{
+    z-index: 9;
+    color: var(--text-100);
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-style: none;
+}
+
+.logo {
+    margin: 0 5%;
+    z-index: 9;
+}
+
+.logo img {
+    width: 100px;
+    height: 10 0px;
+}
+
+.shop-menu {
+    width: 20%;
+    display: flex;  
+    align-items: center;
+}
+
+.shop-menu a {
+    color: var(--text-100);
+    font-size: 1.7rem;
+    text-decoration: none;
+    font-style: none;
+    z-index: 9;
+}
+
+.shop-menu .cart {
+    border-right: 1px solid;
+    padding-right: 30px;
+    margin-right: 30px;
+}
+
+/*=================VIDEO==============*/
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    isolation: isolate;
+}
+
+.video-container::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    background: #1616168a;
+}
+
+.video-container .socials {
+    z-index: 3;
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-container p {
+    color: var(--text-200);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+}
+
+.video-container span {
+    color: var(--text-200);
+    width: 1px;
+    height: 65px;
+    border: solid 1px;
+    margin: 10px 0 20px 0;
+}
+
+.video-container a {
+    color: var(--text-200);
+    font-size: 1.7rem;
+    text-decoration: none;
+    font-style: none;
+    margin-bottom: 5px;
+    transition: 0.6s ease;
+}
+
+.video-container a:hover {
+    color: var(--text-100);
+}
+
+/*============FOOTER========*/
+
+.footer {
+    width: 100%;
+    height: 60vh;
+    background-color: pink;
+}
+
+.footer-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-container .footer-bg {
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+}
+
+.footer-container .left-section {
+    width: 40%; 
+    color: var(--text-200);
+    position: relative;
+    padding-top: 180px;
+}
+
+.left-section .logo {
+    outline: red dashed 1px;
+}
+
+.footer-container .left-section .logo-footer {
+    width: 300px;
+    height: 70px;
+}
+
+.footer-container .left-section p {
+    font-size: 1.2rem;
+    padding: 30px 70px 30px 0;
+}
+
+.footer-container .left-section .social-links a{
+    color: var(--text-200);
+    font-size: 2.5rem;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: 0.3s ease;
+}
+
+.footer-container .left-section .social-links a:hover {
+    color: var(--text-100);
+}
+
+.footer-container .right-section {
+    width: 20%;
+    color: var(--text-200);
+    position: relative;
+    padding-top: 190px;
+}
+
+.footer-container .right-section h1 {
+    font-size: 2.5rem;
+}
+
+.footer-container .right-section .email,
+.footer-container .right-section .phone {
+    display: flex;
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+
+.footer-container .right-section span {
+    font-size: 1.7rem;
+    margin-right: 10px;
+}
