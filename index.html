@@ -9,18 +9,22 @@
 <body>
     <header>
         <div class="navigation-container">
-            <div class="navigation-menu">
+            <div class="burger-menu-container" id="menu-button">
+                <ion-icon name="menu" class="menu-icon"></ion-icon>
+            </div>
+            <div class="navigation-menu" id="nav-bar">
+                <div class="close-button" id="close-button">
+                    <ion-icon name="close"></ion-icon>
+                </div>
                 <a href="">Home</a>
                 <a href="">Shop</a>
-            </div>
-            <a href="" class="logo">
-                <img src="styles/pictures/logo.webp" alt="">
-            </a>
-            <div class="navigation-menu">
                 <a href="">Blog</a>
                 <a href="">About</a>
             </div>
         </div>
+        <a href="" class="logo">
+            <img src="styles/pictures/logo.webp" alt="">
+        </a>
         <div class="shop-menu">
             <a href="" class="cart">
                 <ion-icon name="bag-outline"></ion-icon>
@@ -95,7 +99,7 @@
                     <img src="styles/pictures/best1.png" alt="">
                 </div>
                 <div class="description-container">
-                    <h3>1G Thailand Aircool Riding Jersey</h3>
+                    <h3>1G Thailand Aircool Riding Jersey (Limited Edition)</h3>
                     <p>₱1,500</p>
                     <button>Add to bag</button>
                 </div>        
@@ -260,7 +264,7 @@
         </div>
         <a href="" class="read-more-blogs">Read More ></a>
         <div class="main-blog-container">
-            <div class="blog-1">
+            <div class="blog-1 blog-section active">
                 <div class="blog-container"> 
                     <div class="img-container">
                         <img src="styles/pictures/blog1.jpg" alt="">
@@ -269,17 +273,18 @@
                         <h2 class="title">
                             The Legendary Aerox 024
                         </h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestias recusandae esse aperiam deleniti fugit inventore labore minima asperiores excepturi quaerat voluptate dolores voluptates, veniam saepe dolorem! Inventore delectus autem laudantium eaque illum deserunt perferendis cumque natus omnis, similique, quia accusamus! Rerum, unde voluptatibus corrupti eos sapiente rem ducimus enim deleniti soluta id culpa alias praesentium a molestias facilis fuga incidunt sint perspiciatis. Impedit repudiandae nesciunt libero ducimus laboriosam, nihil voluptas! Nobis aut non atque incidunt deserunt fugiat repellat ab?</p>
-                    </div>
-                    <div class="read-more-button">
-                        <a href="">Read More ></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ab magnam doloremque accusantium eveniet inventore excepturi aut unde. Consequuntur natus voluptatum repellat laudantium corrupti deserunt, sequi vero eligendi porro commodi a voluptates labore ad eaque ea fugiat. Quasi, hic veniam.</p>
+                        
+                        <div class="read-more-button">
+                            <a href="">Read More ></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="blog-2">
+            <div class="blog-2 blog-section">
                 <div class="blog-container"> 
                     <div class="img-container">
-                        <img src="styles/pictures/blog2.jpg" alt="">
+                        <img src="styles/pictures/blog2.jpg" alt="" class="second-image-blog">
                     </div>
                     <div class="description-container">
                         <h3 class="title">
@@ -292,7 +297,7 @@
                     </div>
                 </div>
             </div>
-            <div class="blog-2">
+            <div class="blog-2 blog-section">
                 <div class="blog-container"> 
                     <div class="img-container">
                         <img src="styles/pictures/blog4.jpg" class="blog-image-3" alt="">
@@ -307,6 +312,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="nav-arrows">
+            <div class="prev-button">
+                <ion-icon name="chevron-back"></ion-icon>
+            </div>
+            <div class="next-button">
+                <ion-icon name="chevron-forward"></ion-icon>
             </div>
         </div>
     </section>
