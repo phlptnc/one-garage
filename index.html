@@ -26,14 +26,14 @@
             <img src="styles/pictures/logo.webp" alt="">
         </a>
         <div class="shop-menu">
-            <a href="" class="cart">
-                <ion-icon name="bag-outline"></ion-icon>
+            <div class="cart" id="bag-button">
+                <ion-icon name="bag-outline" class="bag-icon"></ion-icon>
                 <p class="bag-count">1</p>
-            </a>
+            </div>
             <span></span>
-            <a href="" class="account">
-                <ion-icon name="person-outline"></ion-icon>
-            </a>
+            <div class="account">
+                <ion-icon name="person-outline" class="account-icon"></ion-icon>
+            </div>
         </div>
     </header>
     <div class="video-container">
@@ -50,6 +50,47 @@
             <ion-icon name="chevron-down-outline" class="scroll-icon"></ion-icon>
         </a>
         <p class="scroll-down">Scroll down</p>
+    </div>
+    
+    <div class="cart-container" id="bag-container">
+        <div class="cart-title">    
+            <h3>Your Shopping Bag (1)</h3>
+            <div class="cart-close-button" id="cart-close-button">
+                <ion-icon name="close"></ion-icon>
+            </div>   
+        </div>
+        <div class="cart-body">
+            <div class="full-cart">
+                <div class="cart-item">
+                    <div class="cart-img">
+                        <img src="styles/shop-pictures/1G Concrete Dash Shirt.png" alt="">
+                    </div>
+                    <div class="cart-middle">
+                        <p class="cart-name">1G Concrete Dash Shirt</p>
+                        <p class="cart-price">₱756</p>
+                    </div>
+                    <div class="cart-right">
+                        <div class="remove-item">
+                            <ion-icon name="trash"></ion-icon>
+                        </div>
+                        <div class="cart-quantity">
+                            <button>-</button>
+                            <p>1</p>
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout-container">
+                <div class="left-checkout">
+                    <p>Subtotal:</p>
+                    <p class="total-price">₱756</p>
+                </div>
+                <div class="right-checkout">    
+                    <button>Go to Checkout</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <section class="categories" id="categories">
@@ -79,10 +120,10 @@
             </div>
         </div>
         <div class="featured-product">
-            <div class="tumbler-container">
-                <img src="styles/pictures/tumbler.jpg" alt="">
-            </div>
-            <div class="container">
+            <img src="styles/pictures/banner.png" alt="">
+            <div class="description-box">
+                <h2>High Density Printing & Premium Fabric</h2>
+                <p>Maded from premium, breathable fabric, feels incredibly soft against your skin and drapes elegantly and flattering fit.</p>
                 <button>Shop now</button>
             </div>
         </div>
@@ -167,7 +208,7 @@
             <div class="blog-1 blog-section active">
                 <div class="blog-container"> 
                     <div class="img-container">
-                        <img src="styles/pictures/blog1.jpg" alt="">
+                        <img src="styles/pictures/blog1.jpg" alt="" class="first-image-blog">
                     </div>
                     <div class="description-container">
                         <h2 class="title">
@@ -216,10 +257,10 @@
         </div>
         <div class="nav-arrows">
             <div class="prev-button">
-                <ion-icon name="chevron-back"></ion-icon>
+                <ion-icon name="chevron-back" class="arrows"></ion-icon>
             </div>
             <div class="next-button">
-                <ion-icon name="chevron-forward"></ion-icon>
+                <ion-icon name="chevron-forward" class="arrows"></ion-icon>
             </div>
         </div>
     </section>

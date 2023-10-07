@@ -15,4 +15,18 @@ menuBtn.addEventListener('click', () => {
 
 closeBtn.addEventListener('click', () => {
     menuBox.style.display = 'none';
-})
+});
+
+
+// cart-button 
+const cartBtn = document.querySelector('#bag-button');
+const cartBox = document.querySelector('#bag-container');
+const closeCartBtn = document.querySelector('#cart-close-button');
+
+cartBtn.addEventListener('click', () => {
+    cartBox.style.display = 'block';
+});
+
+closeCartBtn.addEventListener('click', () => {
+    cartBox.style.display = 'none';
+});

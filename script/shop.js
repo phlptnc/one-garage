@@ -45,7 +45,6 @@ products.forEach((product) => {
             </div>        
         </div>
     `;
-    console.log(productsHTML);
 });
 
 document.querySelector('.shop-products').innerHTML = productsHTML;
