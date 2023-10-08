@@ -1,4 +1,4 @@
-const products = [{
+export const products = [{
     name: '1G Concrete Dash Shirt',
     price: '756'
 }, {
@@ -31,7 +31,7 @@ const products = [{
 }];
 
 
-const bestProducts = [{
+export const bestProducts = [{
     name: '1G Thailand Aircool Riding Jersey',
     price: '1,500'
 }, {
@@ -44,3 +44,4 @@ const bestProducts = [{
     name: 'Quad Lock Motorcycle Fork Stem Mount',
     price: '3,300'
 }];
+

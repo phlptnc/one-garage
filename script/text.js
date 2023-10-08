@@ -1,3 +1,7 @@
+import {cart, addToCart } from "../script/cart.js";
+import {products, bestProducts} from "../script/data.js";
+
+// Make header sticky upon scroll
 window.addEventListener('scroll', function (){
     const header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 0);
@@ -31,8 +35,8 @@ closeCartBtn.addEventListener('click', () => {
     cartBox.style.display = 'none';
 });
 
-// Generate the BEST SELLER section products into HTML
 
+// Generate the BEST SELLER section products into HTML
 let bestProductsHTML = '';
 
 bestProducts.forEach((bestProducts) => {
@@ -44,7 +48,9 @@ bestProducts.forEach((bestProducts) => {
             <div class="description-container">
                 <h3>${bestProducts.name}</h3>
                 <p>₱${bestProducts.price}</p>
-                <button>Add to bag</button>
+                <button id="add-to-cart" data-product-name="${bestProducts.name}">
+                    Add to bag
+                    </button>
             </div>        
         </div>
     `;
@@ -77,44 +83,25 @@ products.forEach((product) => {
 document.querySelector('.shop-products').innerHTML = productsHTML;
 
 
-// Add products to the cart
+ 
+
+// Generate the quantity of the cart
+function updateCartQuantity(){
+    let cartQuantity = 0;
+
+    cart.forEach((item) => {
+        cartQuantity += item.quantity;
+    });
+
+    document.querySelector('#bag-quantity')
+        .innerHTML = cartQuantity;
+};
 
 document.querySelectorAll('#add-to-cart')
     .forEach((button) => {
         button.addEventListener('click', () => {
             const productName = button.dataset.productName;
-
-            let matchingItem;
-
-            cart.forEach((cartItems) => {
-                if (productName === cartItems.productName){
-                    matchingItem = cartItems;
-                }
-            });
-
-            // add the quantity of the same items
-
-            if (matchingItem) {
-                matchingItem.quantity += 1;
-            } else {
-                cart.push ({
-                    productName: productName,
-                    quantity: 1
-                });   
-            }
-
-            // generate the quantity of the cart
-            let cartQuantity = 0;
-
-            cart.forEach((item) => {
-                cartQuantity += item.quantity;
-            });
-
-            document.querySelector('#bag-quantity')
-                .innerHTML = cartQuantity;
-
-
-            console.log(cartQuantity);
-            console.log(cart);
+            addToCart(productName);
+            updateCartQuantity();
         });
     });

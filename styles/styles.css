@@ -976,6 +976,10 @@ section .title-container {
         overflow-x: auto;
     }
 
+    .shop-container::-webkit-scrollbar {
+        display: none;
+    }
+    
     .best-sellers-container .product-container {
         height: 100%;
     }
