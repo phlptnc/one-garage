@@ -28,4 +28,19 @@ const products = [{
 }, {
     name: 'G-REN Mags For Aerox Nvx (Gr6) 14',
     price: '5,690'
-}]
+}];
+
+
+const bestProducts = [{
+    name: '1G Thailand Aircool Riding Jersey',
+    price: '1,500'
+}, {
+    name: 'Trucker Cap 1G One Garage',
+    price: '1,780'
+}, {
+    name: 'HJC Helmets C10 Fabio Quartararo MC1SF',
+    price: '7,190' 
+}, {
+    name: 'Quad Lock Motorcycle Fork Stem Mount',
+    price: '3,300'
+}];

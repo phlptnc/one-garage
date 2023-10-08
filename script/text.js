@@ -31,8 +31,29 @@ closeCartBtn.addEventListener('click', () => {
     cartBox.style.display = 'none';
 });
 
+// Generate the BEST SELLER section products into HTML
 
-// Generate the shop section products into HTML
+let bestProductsHTML = '';
+
+bestProducts.forEach((bestProducts) => {
+    bestProductsHTML += `
+        <div class="product-container">
+            <div class="img-container">
+                <img src="styles/pictures/${bestProducts.name}.png" alt="">
+            </div>
+            <div class="description-container">
+                <h3>${bestProducts.name}</h3>
+                <p>₱${bestProducts.price}</p>
+                <button>Add to bag</button>
+            </div>        
+        </div>
+    `;
+})
+
+document.querySelector('.best-sellers-container')
+    .innerHTML = bestProductsHTML;
+
+// Generate the SHOP section products into HTML
 
 let productsHTML = '';
 
