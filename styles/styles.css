@@ -443,6 +443,7 @@ section .title-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     background: var(--bg-200);
     transition: 0.3s ease;
 }

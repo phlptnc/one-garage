@@ -30,3 +30,70 @@ cartBtn.addEventListener('click', () => {
 closeCartBtn.addEventListener('click', () => {
     cartBox.style.display = 'none';
 });
+
+
+// Generate the shop section products into HTML
+
+let productsHTML = '';
+
+products.forEach((product) => {
+    productsHTML += `
+        <div class="product-container">
+            <div class="img-container">
+                <img src="styles/shop-pictures/${product.name}.png" alt ="">
+            </div>
+            <div class="description-container">
+                <h4>${product.name}</h4>
+                <p>₱${product.price}</p>
+                <button id="add-to-cart" data-product-name="${product.name}">
+                    Add to bag
+                </button>
+            </div>        
+        </div>
+    `;
+});
+
+document.querySelector('.shop-products').innerHTML = productsHTML;
+
+
+// Add products to the cart
+
+document.querySelectorAll('#add-to-cart')
+    .forEach((button) => {
+        button.addEventListener('click', () => {
+            const productName = button.dataset.productName;
+
+            let matchingItem;
+
+            cart.forEach((cartItems) => {
+                if (productName === cartItems.productName){
+                    matchingItem = cartItems;
+                }
+            });
+
+            // add the quantity of the same items
+
+            if (matchingItem) {
+                matchingItem.quantity += 1;
+            } else {
+                cart.push ({
+                    productName: productName,
+                    quantity: 1
+                });   
+            }
+
+            // generate the quantity of the cart
+            let cartQuantity = 0;
+
+            cart.forEach((item) => {
+                cartQuantity += item.quantity;
+            });
+
+            document.querySelector('#bag-quantity')
+                .innerHTML = cartQuantity;
+
+
+            console.log(cartQuantity);
+            console.log(cart);
+        });
+    });

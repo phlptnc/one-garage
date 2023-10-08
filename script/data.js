@@ -28,23 +28,4 @@ const products = [{
 }, {
     name: 'G-REN Mags For Aerox Nvx (Gr6) 14',
     price: '5,690'
-},]
-
-let productsHTML = '';
-
-products.forEach((product) => {
-    productsHTML += `
-        <div class="product-container">
-            <div class="img-container">
-                <img src="styles/shop-pictures/${product.name}.png" alt ="">
-            </div>
-            <div class="description-container">
-                <h4>${product.name}</h4>
-                <p>₱${product.price}</p>
-                <button>Add to bag</button>
-            </div>        
-        </div>
-    `;
-});
-
-document.querySelector('.shop-products').innerHTML = productsHTML;
+}]
