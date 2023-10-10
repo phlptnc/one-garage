@@ -55,6 +55,10 @@ header.sticky {
     align-items: center;
 }
 
+.navigation-container a {
+    cursor: pointer;
+  }
+
 .navigation-menu {
     width: 65%;
     display: flex;
@@ -1146,9 +1150,7 @@ section .title-container {
     .footer-container .right-section .email {
         margin: 15px 0 15px 0;
     }
-
 }
-
     
 @media (max-width: 800px) {
 
