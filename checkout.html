@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+</head>
+<body>
+    <header class="header-checkout">
+        <div class="navigation-container">
+            <div class="burger-menu-container" id="menu-button">
+                <ion-icon name="menu" class="menu-icon"></ion-icon>
+            </div>
+            <div class="navigation-menu" id="nav-bar">
+                <div class="close-button" id="close-button">
+                    <ion-icon name="close"></ion-icon>
+                </div>
+                <a href="index.html">Home</a>
+                <a href="">Shop</a>
+                <a href="">Blog</a>
+                <a href="">About</a>
+            </div>
+        </div>
+        <a href="index.html " class="logo">
+            <img src="styles/pictures/logo.webp" alt="">
+        </a>
+        <div class="shop-menu">
+            <a href="checkout.html" class="cart" id="bag-button">
+                <ion-icon name="bag-outline" class="bag-icon"></ion-icon>
+                <p class="bag-count" id="bag-quantity"></p>
+            </a>
+            <span></span>
+            <a href class="account">
+                <ion-icon name="person-outline" class="account-icon"></ion-icon>
+            </a>
+        </div>
+    </header>
+
+    <section class="checkout">
+        <div class="title-container">
+            <h1 id="checkout-cart-quantity">Checkout ()</h1>
+        </div>
+        <h2>Review your order</h2>
+        <div class="checkout-container">
+            
+            <img src="styles/pictures/empty-cart.webp" alt="" class="empty-bag">
+            <div class="checkout-body">
+                <!--checkout.js-->
+            </div>
+            <div class="order-summary-container">
+                <div class="order-body">    
+                    <h2>Order Summary</h2>
+                    <div class="number-items">    
+                        <p id="order-quantity">Items ()</p>
+                    </div>
+                    <div class="subtotal-box">
+                        <p>Subtotal:</p>
+                        <p>₱1300</p>
+                    </div>
+                    <div class="shipping-box">
+                        <p>Shipping Fee:</p>
+                        <p>₱55</p>
+                    </div>
+                    <div class="total-box">
+                        <p>Total Order:</p>
+                        <p>₱1355</p>
+                    </div>
+                    <div class="checkout-box">    
+                        <button>Checkout Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="footer">
+        <div class="footer-container">
+            <img src="styles/pictures/footer.jpg" class="footer-bg" alt="">
+            <div class="left-section">
+                <a>
+                    <img src="styles/pictures/logo-2.png" class="logo-footer">
+                </a>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quos reprehenderit dignissimos magnam rerum ea officiis sit eveniet, amet eaque?
+                </p>
+                <div class="social-links">
+                    <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <h1>Contacts</h1>
+                <div class="email">
+                    <span><ion-icon name="mail-outline"></ion-icon></span>onegarage@gmail.com
+                </div>
+                <div class="phone">
+                    <span><ion-icon name="call-outline"></ion-icon></span>123-456-789
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+
+    <script type="module" src="script/checkout.js"></script>
+</body>
+</html>

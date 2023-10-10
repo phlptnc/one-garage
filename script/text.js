@@ -22,21 +22,8 @@ closeBtn.addEventListener('click', () => {
 });
 
 
-// cart-button 
-const cartBtn = document.querySelector('#bag-button');
-const cartBox = document.querySelector('#bag-container');
-const closeCartBtn = document.querySelector('#cart-close-button');
-
-cartBtn.addEventListener('click', () => {
-    cartBox.style.display = 'block';
-});
-
-closeCartBtn.addEventListener('click', () => {
-    cartBox.style.display = 'none';
-});
-
-
 // Generate the BEST SELLER section products into HTML
+
 let bestProductsHTML = '';
 
 bestProducts.forEach((bestProducts) => {
@@ -47,10 +34,13 @@ bestProducts.forEach((bestProducts) => {
             </div>
             <div class="description-container">
                 <h3>${bestProducts.name}</h3>
-                <p>₱${bestProducts.price}</p>
-                <button id="add-to-cart" data-product-name="${bestProducts.name}">
-                    Add to bag
-                    </button>
+                <div class="rating-container">
+                    <div class="rating-box">
+                        <img src="styles/ratings/rating-${bestProducts.rating.stars * 10}.png" alt="">
+                    </div>
+                    <p class="rating-number">${bestProducts.rating.count} sold</p>
+                </div>
+                <p class="price">₱${bestProducts.price}</p>
             </div>        
         </div>
     `;
@@ -83,9 +73,8 @@ products.forEach((product) => {
 document.querySelector('.shop-products').innerHTML = productsHTML;
 
 
- 
-
 // Generate the quantity of the cart
+
 function updateCartQuantity(){
     let cartQuantity = 0;
 
@@ -96,6 +85,8 @@ function updateCartQuantity(){
     document.querySelector('#bag-quantity')
         .innerHTML = cartQuantity;
 };
+
+updateCartQuantity();
 
 document.querySelectorAll('#add-to-cart')
     .forEach((button) => {

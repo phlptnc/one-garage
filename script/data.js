@@ -33,15 +33,30 @@ export const products = [{
 
 export const bestProducts = [{
     name: '1G Thailand Aircool Riding Jersey',
-    price: '1,500'
+    price: '1,500',
+    rating: {
+        stars: 5,
+        count: 201
+    }
 }, {
     name: 'Trucker Cap 1G One Garage',
-    price: '1,780'
+    price: '1,780',
+    rating: {
+        stars: 4.5,
+        count: 126
+    }
 }, {
     name: 'HJC Helmets C10 Fabio Quartararo MC1SF',
-    price: '7,190' 
+    price: '7,190',
+    rating: {
+        stars: 5,
+        count: 87
+    } 
 }, {
     name: 'Quad Lock Motorcycle Fork Stem Mount',
-    price: '3,300'
+    price: '3,300',
+    rating: {
+        stars: 5,
+        count: 103
+    }
 }];
-

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>One Garage</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -26,16 +26,17 @@
             <img src="styles/pictures/logo.webp" alt="">
         </a>
         <div class="shop-menu">
-            <div class="cart" id="bag-button">
+            <a href="checkout.html" class="cart" id="bag-button">
                 <ion-icon name="bag-outline" class="bag-icon"></ion-icon>
-                <p class="bag-count" id="bag-quantity">0</p>
-            </div>
+                <p class="bag-count" id="bag-quantity"></p>
+            </a>
             <span></span>
-            <div class="account">
+            <div href class="account">
                 <ion-icon name="person-outline" class="account-icon"></ion-icon>
             </div>
         </div>
     </header>
+    
     <div class="video-container">
         <video src="styles/video/1.mp4" autoplay loop muted></video>
         <div class="socials">
@@ -52,29 +53,6 @@
         <p class="scroll-down">Scroll down</p>
     </div>
     
-    <div class="cart-container" id="bag-container">
-        <div class="cart-title">    
-            <h3>Your Shopping Bag (1)</h3>
-            <div class="cart-close-button" id="cart-close-button">
-                <ion-icon name="close"></ion-icon>
-            </div>   
-        </div>
-        <div class="cart-body">
-            <div class="full-cart">
-                <!--cart.js-->
-            </div>
-            <div class="checkout-container">
-                <div class="left-checkout">
-                    <p>Subtotal:</p>
-                    <p class="total-price">₱756</p>
-                </div>
-                <div class="right-checkout">    
-                    <button>Go to Checkout</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <section class="categories" id="categories">
         <div class="title-container">
             <span></span>
