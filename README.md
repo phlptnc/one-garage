@@ -25,6 +25,7 @@ JavaScript
 </div>
 
 <br>
+<br>
 <h3>Checkout Page</h3>
 
 <div>
