@@ -46,7 +46,7 @@ cart.forEach((cartItem) => {
                 <p class="quantity-title">Qty:</p>
                 <div class="cart-quantity">
                     <button>-</button>
-                    <p>${cartItem.quantity}</p>
+                    <p class="cart-item-quantity">${cartItem.quantity}</p>
                     <button>+</button>
                 </div>
             </div>
@@ -71,6 +71,8 @@ deleteProduct.forEach((e) => {
         updateCartQuantity();          
         updateBagQuantity ();
         updateOrderQuantity();
+        updateSubtotal();
+        updateTotalPrice();
     });
 });    
 
@@ -115,3 +117,43 @@ function updateOrderQuantity() {
 }
 
 updateOrderQuantity();
+
+
+// update the SubTotal Price of checkoutx
+
+function updateSubtotal() {
+    var cartItemContainer = document.getElementsByClassName('checkout-body')[0];
+    var cartItems = cartItemContainer.getElementsByClassName('cart-item');
+    var subTotal = 0;
+
+    for (var i = 0; i < cartItems.length; i++) {
+        var cartItem = cartItems[i];
+        var priceElement = cartItem.getElementsByClassName('cart-price')[0];
+        var quantityElement = cartItem.getElementsByClassName('cart-item-quantity')[0];
+        var price = priceElement.innerText.replace('₱','');
+        var priceNumber = price.replace( ',', '');
+        var quantity = quantityElement.innerText;
+        subTotal = subTotal + (priceNumber * quantity);
+    }
+
+    document.getElementById('subtotal').innerText = '₱' + (subTotal.toLocaleString());
+};
+
+updateSubtotal();
+
+
+// update the Total Price of checkout
+
+function updateTotalPrice() {
+
+    const shippingFee = 55;
+    var subTotal = document.getElementById('subtotal').innerText;
+    var price = subTotal.replace('₱', '')
+    var priceNumber = parseFloat(price.replace(',', '')); 
+    var totalPrice = shippingFee + priceNumber;
+
+    document.getElementById('total-order').innerText = '₱' + (totalPrice.toLocaleString());
+
+};
+
+updateTotalPrice();

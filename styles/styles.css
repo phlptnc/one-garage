@@ -796,7 +796,7 @@ section .title-container {
     height: 50px;
 }
 
-.footer-container .left-section p {
+.footer-container .left-section .short-description {
     font-size: 1.1rem;
     line-height: 30px;
     width: 600px;
@@ -813,6 +813,16 @@ section .title-container {
 
 .footer-container .left-section .social-links a:hover {
     color: var(--text-100);
+}
+
+.left-section .web-design {
+    padding-top: 15px;
+    font-size: 1.1rem;
+}
+
+.left-section .web-design a {
+    color: var(--text-200);
+    text-decoration: none;
 }
 
 .footer-container .right-section {

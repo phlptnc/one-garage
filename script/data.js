@@ -27,9 +27,8 @@ export const products = [{
     price: '5,690'
 }, {
     name: 'G-REN Mags For Aerox Nvx (Gr6) 14',
-    price: '5,690'
+    price: '5,600'
 }];
-
 
 export const bestProducts = [{
     name: '1G Thailand Aircool Riding Jersey',
