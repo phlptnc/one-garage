@@ -275,6 +275,7 @@ section span {
     height: 1px;
     border: solid 2px;
     margin-right: 20px;
+    color: var(--accent-100);
 }
 
 section .title-container {
@@ -560,6 +561,7 @@ section .title-container {
     background: var(--bg-200);
     min-width: 200px;
     padding: 0 15px 15px;
+    position: relative;
 }
 
 .shop-container .product-container img {
@@ -599,9 +601,39 @@ section .title-container {
     transition: 0.3s ease;
 }
 
-
 .shop-container .product-container .description-container button:hover {
     background-color: var(--bg-300);
+}
+
+.shop-container .add-to-bag-container {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    padding-top: 10px;
+    transition: 0.3s ease;
+}
+
+.shop-container .add-to-bag-container p {
+    width: 65%;
+    font-size: 1rem;
+    padding: 8px 0;
+    border-radius: 30px;
+    color: var(--text-100);
+    background-color: var(--bg-300);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+.shop-container .add-to-bag-container p .check-mark {
+    font-size: 1.3rem;
 }
 
 /*=============LOGO=============*/
@@ -1064,6 +1096,10 @@ section .title-container {
         line-height: 25px;
     }
 
+    .blog-section .blog-container .description-container p:nth-child(2) {
+        display: none;
+    }
+
     .nav-arrows {
         justify-content: space-between;
         font-size: 2.5rem;
@@ -1222,6 +1258,11 @@ section .title-container {
         width: 60%;
         padding: 0;
     }  
+
+    .footer-container .left-section .short-description {
+        width: auto;
+        padding: 20px 0;
+    }
 }
 
 

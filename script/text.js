@@ -56,6 +56,9 @@ let productsHTML = '';
 products.forEach((product) => {
     productsHTML += `
         <div class="product-container">
+            <div class="add-to-bag-container" id="notif-${product.name}">
+                <p class="add-to-bag-notif"><ion-icon name="checkmark-circle" class="check-mark"></ion-icon>Added to bag</p>
+            </div>
             <div class="img-container">
                 <img src="styles/shop-pictures/${product.name}.png" alt ="">
             </div>
@@ -84,6 +87,9 @@ function updateCartQuantity(){
 
     document.querySelector('#bag-quantity')
         .innerHTML = cartQuantity;
+
+
+    
 };
 
 updateCartQuantity();
@@ -93,6 +99,14 @@ document.querySelectorAll('#add-to-cart')
         button.addEventListener('click', () => {
             const productName = button.dataset.productName;
             addToCart(productName);
-            updateCartQuantity();
+            updateCartQuantity();     
+
+            const notifMessage = document.getElementById(`notif-${productName}`);
+            
+            notifMessage.style.display ='flex';
+
+            setTimeout(() => {
+                notifMessage.style.display = 'none';    
+            }, 2000);
         });
     });
