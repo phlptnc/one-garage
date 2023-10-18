@@ -1051,7 +1051,7 @@ section .title-container {
 
     .main-blog-container .blog-section {
         width: 80%;
-        height: 400px;
+        height: auto;
         display: none;
     }
 
