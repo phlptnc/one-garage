@@ -8,7 +8,7 @@
 
 <p>Credits for the videos, photos and actual products <a href='https://www.facebook.com/OneGaragePH'>1G One Garage</a></p>
 
-Live Demo: <a href=''></a>
+Live Demo: <a href='https://one-garage.vercel.app/'>One Garage Demo</a>
 
 <h3>Build with:</h3>
 
